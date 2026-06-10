@@ -30,6 +30,8 @@ public:
             ret.first = (ret.first - 1LL * pre[l].first * pow1[sz] % mod1 + mod1) % mod1;
             ret.second = (ret.second - 1LL * pre[l].second * pow2[sz] % mod2 + mod2) % mod2;
         }
+        if (ret.first < 0) ret.first += mod1;
+        if (ret.second < 0) ret.second += mod2;
         return ret;
     }
 };

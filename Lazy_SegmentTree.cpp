@@ -66,7 +66,7 @@ struct SegTree {
         propagate(node, lx, rx);
         if (lx >= r || rx <= l) return;
         if (lx >= l && rx <= r) {
-            SegData[node].update(val, l, r);
+            SegData[node].update(val, lx, rx);
             return;
         }
         int mid = (rx + lx) / 2;
